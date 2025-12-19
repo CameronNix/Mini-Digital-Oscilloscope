@@ -25,19 +25,6 @@ Key hardware features:
 - ESP32 antenna keep-out region for reliable Wi-Fi operation
 - SPI interface for OLED display
 - Analog input sampled via ESP32 ADC
-### Schematic
-[View schematic (PDF)](hardware/Schematic.pdf)
-
-### PCB Layout
-**Top Layer**
-![PCB Top](hardware/PCB_FRONT_VIEWpng)
-
-**Bottom Layer**
-![PCB Bottom](hardware/PCB_BACK_VIEW.png)
-
-### 3D View
-![PCB 3D](hardware/PCB_3D_VIEW.png)
-
 ### RF & Grounding Considerations
 The top-layer ground plane is intentionally split to maintain a copper-free
 keep-out region beneath the ESP32 antenna. A continuous ground reference is
