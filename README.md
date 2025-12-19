@@ -14,6 +14,35 @@ users to scale the waveform horizontally, similar to professional oscilloscopes.
 - ESP32 microcontroller
 - 128×64 OLED display (SPI)
 - Potentiometer (time-base control)
+## Hardware Design
+This project includes a custom ESP32-based PCB designed in KiCad to support
+a mini digital oscilloscope application. The board integrates an SPI OLED
+display, analog input circuitry, and onboard power distribution.
+
+Key hardware features:
+- 2-layer PCB designed in KiCad (schematic + layout)
+- Solid bottom-layer ground plane with stitching vias
+- ESP32 antenna keep-out region for reliable Wi-Fi operation
+- SPI interface for OLED display
+- Analog input sampled via ESP32 ADC
+### Schematic
+[View schematic (PDF)](hardware/Schematic.pdf)
+
+### PCB Layout
+**Top Layer**
+![PCB Top](hardware/PCB_FRONT_VIEWpng)
+
+**Bottom Layer**
+![PCB Bottom](hardware/PCB_BACK_VIEW.png)
+
+### 3D View
+![PCB 3D](hardware/PCB_3D_VIEW.png)
+
+### RF & Grounding Considerations
+The top-layer ground plane is intentionally split to maintain a copper-free
+keep-out region beneath the ESP32 antenna. A continuous ground reference is
+preserved using a solid bottom-layer ground plane and multiple ground stitching
+vias to ensure low-impedance return paths.
 ## Software
 - Language: C / C++
 - Framework: Arduino (ESP32 core)
